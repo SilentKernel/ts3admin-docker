@@ -15,7 +15,7 @@ services:
     links:
       - php:php
     volumes_from:
-       - php
+      - php
     volumes:
       - ./logs:/var/log/nginx
     environment:
