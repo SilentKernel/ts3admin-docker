@@ -26,10 +26,7 @@ COPY ./app /usr/source/tsweb
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-VOLUME /var/log
 VOLUME /var/www/html
-VOLUME /tmp
-
 WORKDIR /var/www/html/
 
 EXPOSE 9000
