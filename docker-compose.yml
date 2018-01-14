@@ -11,7 +11,7 @@ services:
     image: silentk/teampseak-web-nginx
     restart: always
     depends_on:
-          - php
+      - php
     links:
       - php:php
     volumes_from:
