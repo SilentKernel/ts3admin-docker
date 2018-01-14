@@ -1,0 +1,24 @@
+version: "2"
+services:
+  php:
+    container_name: ts3web-php
+    network_mode: bridge
+    image: silentk/teampseak-web-php
+    restart: always
+  nginx:
+    container_name: ts3web-nginx
+    network_mode: bridge
+    image: silentk/teampseak-web-nginx
+    restart: always
+    depends_on:
+          - php
+    links:
+      - php:php
+    volumes_from:
+       - php
+    volumes:
+      - ./logs:/var/log/nginx
+    environment:
+      - LETSENCRYPT_HOST=your.domain.com
+      - LETSENCRYPT_EMAIL=youk@domain.com
+      - VIRTUAL_HOST=your.domain.com
