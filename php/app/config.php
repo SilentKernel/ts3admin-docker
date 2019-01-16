@@ -34,7 +34,7 @@ $server[2]['tport']= "30033";
 */
 
 $server[0]['alias']= "Silentkernel";
-$server[0]['ip']= "91.121.87.221";
+$server[0]['ip']= "voice.silentkernel.fr";
 $server[0]['tport']= 10011;
 
 $cfglang	=	"en";			//Language German = de, English = en, Netherlandish=nl (by pd1evl), French = fr (by supra63200)
